@@ -162,6 +162,7 @@ Laravel includes a variety of global "helper" PHP functions. Many of these funct
 [after](#method-fluent-str-after)
 [afterLast](#method-fluent-str-after-last)
 [append](#method-fluent-str-append)
+[newLine](#method-fluent-new-line)
 [ascii](#method-fluent-str-ascii)
 [basename](#method-fluent-str-basename)
 [before](#method-fluent-str-before)
@@ -2002,6 +2003,18 @@ The `append` method appends the given values to the string:
     $string = Str::of('Taylor')->append(' Otwell');
 
     // 'Taylor Otwell'
+    
+<a name="method-fluent-str-new-line"></a>
+#### `newLine` {.collection-method}
+
+The `newLine` method appends a new line to the string.
+
+use Illuminate\Support\Str;
+
+$string = Str::of('Taylor')->newLine()->append('Otwell');
+
+// 'Taylor
+// Otwell'
 
 <a name="method-fluent-str-ascii"></a>
 #### `ascii` {.collection-method}
